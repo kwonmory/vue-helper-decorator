@@ -20,7 +20,7 @@ jobs:
         run: npm ci
       
       - name: Lint
-        run: npx eslint --ext .js,.ts src test
+        run: npx eslint --ext .js,.ts src tests
       
       - name: Run unit tests
         run: npm run test
