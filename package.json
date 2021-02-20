@@ -1,6 +1,6 @@
 {
   "name": "vue-helper-decorator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue helper decorator for gabia Inc.",
   "main": "lib/index.js",
   "scripts": {
