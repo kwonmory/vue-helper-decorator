@@ -1,9 +1,6 @@
 module.exports = {
   verbose: false,
-  setupFilesAfterEnv: [
-      'given2/setup',
-      'jest-plugin-context/setup',
-  ],
+  setupFilesAfterEnv: ['given2/setup', 'jest-plugin-context/setup'],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -12,9 +9,9 @@ module.exports = {
       statements: 100,
     },
   },
-  coverageDirectory: "coverage",
-  testEnvironment: "node",
+  coverageDirectory: 'coverage',
+  testEnvironment: 'node',
   transform: {
-      "^.+\\.(ts)$": "ts-jest"
-    },
-}
+    '^.+\\.(ts)$': 'ts-jest',
+  },
+};
