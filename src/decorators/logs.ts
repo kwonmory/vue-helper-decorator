@@ -1,40 +1,36 @@
-import { ComponentOptions } from 'vue';
-import { createDecorator } from 'vue-class-component';
+import {ComponentOptions} from 'vue';
+import {createDecorator} from 'vue-class-component';
 
 export const ApplyLogAtMethods = (
-  { exceptMethods }: { exceptMethods: string[] } = { exceptMethods: [] },
-) => {
-  return (target: Vue, key: string) => {
-    createDecorator((options: ComponentOptions<Vue>) => {
-      if (!options.methods) return;
-      
-      for (const methodName of Object.keys(options.methods)) {
-        if (~exceptMethods.indexOf(methodName)) continue;
+  {exceptMethods}: {exceptMethods: string[]} = {exceptMethods: []},
+) => (target: Vue, key: string) => {
+  createDecorator((options: ComponentOptions<Vue>) => {
+    if (!options.methods) return;
 
-        const originalMethod = options.methods[methodName];
+    for (const methodName of Object.keys(options.methods)) {
+      if (~exceptMethods.indexOf(methodName)) continue;
 
-        options.methods[methodName] = function (...args) {
-          const seed = Math.abs(Math.floor(Math.random() * 1000));
+      const originalMethod = options.methods[methodName];
 
-          console.log(
-            `%cInvoke[${seed}] Component: ${options.name} - Method: ${methodName}`,
-            'color: blue; font-weight: 600',
-          );
-          console.log(`- [${seed}]Parameters:`, args);
+      options.methods[methodName] = function (...args) {
+        const seed = Math.abs(Math.floor(Math.random() * 1000));
 
-          const startTime = new Date().getTime();
-          const result = originalMethod.apply(this, args);
+        console.log(
+          `%cInvoke[${seed}] Component: ${options.name} - Method: ${methodName}`,
+          'color: blue; font-weight: 600',
+        );
+        console.log(`- [${seed}]Parameters:`, args);
 
-          console.log(`- [${seed}]returns:`, result);
-          console.log(
-            `- [${seed}]runtime: ${
-              (new Date().getTime() - startTime) / 1000
-            }초`,
-          );
+        const startTime = new Date().getTime();
+        const result = originalMethod.apply(this, args);
 
-          return result;
-        };
-      }
-    })(target, key);
-  };
+        console.log(`- [${seed}]returns:`, result);
+        console.log(
+          `- [${seed}]runtime: ${(new Date().getTime() - startTime) / 1000}초`,
+        );
+
+        return result;
+      };
+    }
+  })(target, key);
 };
