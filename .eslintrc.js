@@ -29,6 +29,6 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
-    'object-curly-spacing': 'always',
+    'object-curly-spacing': 'off',
   },
 };
