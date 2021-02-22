@@ -49,5 +49,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'no-empty-function': 'off',
     'linebreak-style': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
   },
 };
