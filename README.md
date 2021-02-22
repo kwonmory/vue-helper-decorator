@@ -27,6 +27,7 @@ npm i vue-helper-decorator
 
 ```ts
 import Vue from 'vue';
+import { SetInitFields } from 'vue-helper-decorator';
 
 export default class SampleComponent extends Vue {
     @SetInitFields()
@@ -45,6 +46,7 @@ export default class SampleComponent extends Vue {
 
 ```js
 import Vue from 'vue';
+import { SetInitFields } from 'vue-helper-decorator';
 
 export default class SampleComponent extends Vue {
     @SetInitFields({ seeFieldsOnConsoleLog: true })
@@ -53,7 +55,7 @@ export default class SampleComponent extends Vue {
     //... hooks
     //... fields
     //... methods
-    .//.. etc
+    //.. etc
 }
 ```
 
@@ -63,12 +65,13 @@ Or,
 
 Make `seeFieldsOnConsoleLog` parameter is `true`
 
-you will see inistal fields on `browser console`.
+You will see inistal fields on `browser console`.
 
 ### @InjectInitFields
 
 ```js
 import Vue from 'vue';
+import { SetInitFields, InjectInitFields } from 'vue-helper-decorator';
 
 export default class SampleComponent extends Vue {
     @SetInitFields({ seeFieldsOnConsoleLog: true })
@@ -92,11 +95,12 @@ export default class SampleComponent extends Vue {
 
 ```js
 import Vue from 'vue';
+import { SetInitFields, InjectInitFields } from 'vue-helper-decorator';
 
 export default class SampleComponent extends Vue {
     @SetInitFields({ seeFieldsOnConsoleLog: true })
     
-    ... hooks
+    //... hooks
     data: string = 'hi';
     num: number = 10;
 
@@ -104,7 +108,7 @@ export default class SampleComponent extends Vue {
     initFields() {
         // ... someting
     }
-    ... etc
+    //... etc
 }
 ```
 
@@ -118,18 +122,20 @@ This is adds a log function to the methods.
 
 ```js
 import Vue from 'vue';
+import { ApplyLogAtMethods } from 'vue-helper-decorator';
+
 
 export default class SampleComponent extends Vue {
     @ApplyLogAtMethods()
     
-    ... hooks
+    //... hooks
     data: string = 'hi';
     num: number = 10;
 
     initFields() {
         // ... someting
     }
-    ... etc
+    //... etc
 }
 ```
 
@@ -145,11 +151,12 @@ you can see next:
 
 ```js
 import Vue from 'vue';
+import { ApplyLogAtMethods } from 'vue-helper-decorator';
 
 export default class SampleComponent extends Vue {
     @ApplyLogAtMethods({ exceptMethods: ['initFields'] })
     
-    ... hooks
+    //... hooks
     data: string = 'hi';
     num: number = 10;
 
@@ -160,7 +167,7 @@ export default class SampleComponent extends Vue {
     test() {
 
     }
-    ... etc
+    //... etc
 }
 ```
 
