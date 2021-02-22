@@ -9,9 +9,12 @@
       "esModuleInterop": true,
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
-      "baseUrl": "./",
-      "outDir": "lib",
+      "outDir": "dist/",
+      "sourceMap": true,
     },
+    "include": [
+      "src"
+    ],
     "rules": {
       "semicolon": true
     }

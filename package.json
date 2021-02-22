@@ -1,8 +1,12 @@
 {
   "name": "vue-helper-decorator",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "vue helper decorator for gabia Inc.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "tsc",
     "lint:fix": "eslint --fix",
@@ -25,10 +29,6 @@
     "type": "git",
     "url": "https://github.com/kwonmory/vue-helper-decorator.git"
   },
-  "typings": "./lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
   "peerDependencies": {
     "vue": "*",
     "vue-class-component": "*",
