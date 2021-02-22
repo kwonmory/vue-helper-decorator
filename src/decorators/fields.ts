@@ -1,10 +1,10 @@
-import {createDecorator} from 'vue-class-component';
+import { createDecorator } from 'vue-class-component';
 import Vue from 'vue';
 import _ from 'lodash';
-import {CustomComponentOptions} from '../types';
+import { CustomComponentOptions } from '../types';
 
 export const SetInitFields = (
-  {seeFieldsOnConsoleLog}: {seeFieldsOnConsoleLog?: boolean} = {
+  { seeFieldsOnConsoleLog }: { seeFieldsOnConsoleLog?: boolean } = {
     seeFieldsOnConsoleLog: false,
   },
 ) => (target: Vue, key: string) => {
@@ -25,7 +25,7 @@ export const SetInitFields = (
 };
 
 export const InjectInitFields = (
-  {exceptFields}: {exceptFields: string[]} = {exceptFields: []},
+  { exceptFields }: { exceptFields: string[] } = { exceptFields: [] },
 ) => (target: Vue, key: string) => {
   createDecorator((options: CustomComponentOptions, key) => {
     if (!options.methods) return;

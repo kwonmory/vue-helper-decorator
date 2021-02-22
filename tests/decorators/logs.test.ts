@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import {ApplyLogAtMethods} from '../../src/decorators/logs';
+import { ApplyLogAtMethods } from '../../src/decorators/logs';
 
 describe('ApplayLogAtMethods', () => {
   context('when exceptMethods parameter is given', () => {
     @Component
     class Sample extends Vue {
-      @ApplyLogAtMethods({exceptMethods: ['method1', 'method2']})
+      @ApplyLogAtMethods({ exceptMethods: ['method1', 'method2'] })
       method1() {
         return 'sample1';
       }
@@ -81,7 +81,7 @@ describe('ApplayLogAtMethods', () => {
 
     it('calls console.log about all methods', () => {
       const component = new Sample();
-      const methods = component.$options.methods as {[x: string]: any};
+      const methods = component.$options.methods as { [x: string]: any };
 
       for (const method of Object.keys(methods)) {
         console.log = jest.fn();

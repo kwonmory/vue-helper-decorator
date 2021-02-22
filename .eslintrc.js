@@ -24,7 +24,19 @@ module.exports = {
     given: 'readonly',
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        tabWidth: 2,
+        Semicolons: true,
+        singleQuote: true,
+        trailingComma: 'all',
+        endOfLine: 'auto',
+        bracketSpacing: true,
+        arrowParens: 'always',
+      },
+    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',

@@ -1,8 +1,8 @@
-import {ComponentOptions} from 'vue';
-import {createDecorator} from 'vue-class-component';
+import { ComponentOptions } from 'vue';
+import { createDecorator } from 'vue-class-component';
 
 export const ApplyLogAtMethods = (
-  {exceptMethods}: {exceptMethods: string[]} = {exceptMethods: []},
+  { exceptMethods }: { exceptMethods: string[] } = { exceptMethods: [] },
 ) => (target: Vue, key: string) => {
   createDecorator((options: ComponentOptions<Vue>) => {
     if (!options.methods) return;

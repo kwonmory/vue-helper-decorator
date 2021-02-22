@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import {InjectInitFields, SetInitFields} from '../../src/decorators/fields';
+import { InjectInitFields, SetInitFields } from '../../src/decorators/fields';
 
 describe('SetInitFields', () => {
   context('when seeFieldsOnConsoleLog parameter is given', () => {
     @Component
     class Sample extends Vue {
-      @SetInitFields({seeFieldsOnConsoleLog: true})
+      @SetInitFields({ seeFieldsOnConsoleLog: true })
       field1 = 'first';
 
       field2 = 0;
@@ -90,7 +90,7 @@ describe('InjectInitFields', () => {
         this.field2 = 1;
       }
 
-      @InjectInitFields({exceptFields: ['field2']})
+      @InjectInitFields({ exceptFields: ['field2'] })
       cleanFields() {
         return 'inited fields';
       }

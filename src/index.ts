@@ -1,2 +1,2 @@
-export {InjectInitFields, SetInitFields} from './decorators/fields';
-export {ApplyLogAtMethods} from './decorators/logs';
+export { InjectInitFields, SetInitFields } from './decorators/fields';
+export { ApplyLogAtMethods } from './decorators/logs';
