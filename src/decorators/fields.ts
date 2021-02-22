@@ -10,12 +10,13 @@ export const SetInitFields = (
 ) => (target: Vue, key: string) => {
   createDecorator((options: CustomComponentOptions) => {
     const origin = options.created;
+
     options.created = function wrapper() {
       const cloneData = _.cloneDeep(this.$data);
       this.initFields = cloneData;
 
       if (seeFieldsOnConsoleLog) console.log(cloneData);
-      return origin;
+      return origin!.apply(this);
     };
   })(target, key);
 };
