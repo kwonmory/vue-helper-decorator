@@ -112,7 +112,7 @@ export default class SampleComponent extends Vue {
 
 - In the following example, Only the rest of the `num field` is initialized.
 
-## ApplyLogAtMethods
+### @ApplyLogAtMethods
 
 This is adds a log function to the methods.
 
