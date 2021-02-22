@@ -1,5 +1,9 @@
 # Change Log
 
+## v.1.1.5
+
+- change eslint setting
+
 ## v1.1.4
 
 - add README.md
