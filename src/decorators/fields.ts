@@ -16,7 +16,10 @@ export const SetInitFields = (
       this.initFields = cloneData;
 
       if (seeFieldsOnConsoleLog) console.log(cloneData);
-      return origin!.apply(this);
+
+      const tempFn = () => {};
+
+      return origin ? origin!.apply(this) : tempFn.apply(this);
     };
   })(target, key);
 };

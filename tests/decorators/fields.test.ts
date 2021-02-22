@@ -11,6 +11,8 @@ describe('SetInitFields', () => {
 
       field2 = 0;
 
+      created = () => {};
+
       changeFields() {
         this.field1 = 'changed';
         this.field2 = 1;
@@ -55,6 +57,8 @@ describe('SetInitFields', () => {
 
       field2 = 0;
 
+      created = () => {};
+
       changeFields() {
         this.field1 = 'changed';
         this.field2 = 1;
@@ -78,6 +82,8 @@ describe('InjectInitFields', () => {
       field1 = 'first';
 
       field2 = 0;
+
+      created = () => {};
 
       changeFields() {
         this.field1 = 'changed';
@@ -115,6 +121,8 @@ describe('InjectInitFields', () => {
       field1 = 'first';
 
       field2 = 0;
+
+      created = () => {};
 
       changeFields() {
         this.field1 = 'changed';

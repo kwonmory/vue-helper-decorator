@@ -47,5 +47,7 @@ module.exports = {
     'no-undef': 'off',
     'func-names': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'no-empty-function': 'off',
+    'linebreak-style': 'off',
   },
 };
