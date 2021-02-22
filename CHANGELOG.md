@@ -1,9 +1,14 @@
 # Change Log
 
-## ~ v1.0.2
+## v1.1.4
+
+- add README.md
+
+## ~ v1.1.3
 
 - fix lint
 - logic
+- tsconfig module change
 
 ## v1.0.1
 
