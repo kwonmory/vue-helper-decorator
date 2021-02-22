@@ -1,5 +1,10 @@
 # Change Log
 
+## ~ v1.0.2
+
+- fix lint
+- logic
+
 ## v1.0.1
 
 apply lint jest.config.js
