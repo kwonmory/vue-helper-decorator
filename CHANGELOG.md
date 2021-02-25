@@ -1,6 +1,10 @@
 # Change Log
 
-## v.1.1.5
+## v1.1.6
+
+- add try catch
+
+## v1.1.5
 
 - change eslint setting
 
@@ -18,7 +22,7 @@
 
 apply lint jest.config.js
 
-## v.1.0.0
+## v1.0.0
 
 publish level1
 
