@@ -38,7 +38,11 @@ export const InjectInitFields = (
       for (const [name, value] of target) {
         if (~exceptFields.indexOf(name)) continue;
 
-        this[name] = _.cloneDeep(value);
+        try {
+          this[name] = _.cloneDeep(value);
+        } catch (error) {
+          console.log('Fix this problems', error);
+        }
       }
 
       return originalMethod.apply(this);
